@@ -1,0 +1,99 @@
+/*Un writing mode para establecer que el texto de todo el documento se escribe horizontal*/
+
+* {
+    writing-mode: horizontal-tb;
+}
+
+/*Aquí le he asignado una id a la dirección de quien envía la carta, le he añadido bordes, he alineado el texto dentro de los bordes
+y le he aplicado hyphens aunque no sé si de manera correcta, he puesto tambien word-wrap para cuando se corta la palabra y por último
+también he añadido un float a la derecha para centrar la "caja" a la derecha*/
+
+#myaddress {
+    float: right;
+    text-align: center;
+    width: 180px;
+    border: 1px solid black;   
+    word-wrap: break-word;
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+}
+
+/*Igual que arriba asigne otra id a la dirección del destinatario y lo he configurado parecido exceptuando un poco los parametros de
+ancho y largo, en este caso no he hecho float ya que no quería recolocarlo.*/
+
+#sentaddress {
+    text-align: center;
+    width: 120px;
+    height: 60;
+    border: 1px solid black;
+    word-wrap: break-word;
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+}
+
+/*Una id exclusiva para la fecha por si quería modificarla de manera independiente, así como algunos ajustes de tamaño y fuente*/
+
+#date {
+    text-align: right; 
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 70px;
+}
+
+/*El encabezado con el título, le he cambiado el color, el tamño de fuente, la font, le he añadido un underline para remarcarlo y lo he
+alineado al centro*/
+
+h1 {
+    color:rgb(55, 150, 99); 
+    font-size: 50px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    text-align: center;
+}
+
+/*Los otros encabezados, les he hecho los mismos cambios que al h1 pero añadiendo algo de word-spacing y un overline junto al underline
+para destacarlo*/
+
+h2 {
+    color:rgb(52, 72, 185); 
+    font-size: 25px; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline overline;
+    text-align: center;
+    word-spacing: 8px;
+}
+
+/*He agrupado los p y divs que serían los párrafos y los párrafos con listas y les he cambiado tamaño, font y he justificado el texto*/
+
+p, div {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 16px;
+    text-align: justify;
+}
+
+/*En los div estan los párrafos con listas, le he añadido algo de line-height porque veía algo junto las listas y lo párrafos*/
+
+div {
+    line-height: 1.6;
+}
+
+/*He creado una clase para cada lista del documento aunque al final solo la he utilizado para la lista descriptiva porque quería
+remarcar con bold los enunciados de cada descripción*/
+
+dt.listitle {
+    font-weight: bold;
+}
+
+/*Tambien he creado una clase dentro de los párrafos para la última frase de la carta para modificar el weight, size, añadir un 
+underline y por último un quote a toda la frase*/
+
+p.unimotto {
+    font-weight: 700; 
+    font-size: 18px; 
+    text-decoration: underline;
+    quotes: "«" "»";
+}
+
+/*Faltaria por poner el vertical align que no lo estaba aplicando bien y he preferido borrarlo del código*/
